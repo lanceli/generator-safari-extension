@@ -1,0 +1,7 @@
+language: node_js
+node_js:
+  - '0.10'
+before_install:
+  - currentfolder=${PWD##*/}
+  - if [ "$currentfolder" != 'generator-safari-extension' ]; then cd .. && eval "mv $currentfolder generator-safari-extension" && cd generator-safari-extension; fi
+
