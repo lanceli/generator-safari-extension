@@ -11,8 +11,10 @@ var SafariExtensionGenerator = yeoman.generators.Base.extend({
     this.pkg = require('../package.json');
 
       // init extension info
-      this.Info = {
-      };
+    this.Info = {
+    };
+
+    this.extensionName = 'app.safariextension';
 
     this.on('end', function () {
       if (!this.options['skip-install']) {
@@ -62,14 +64,15 @@ var SafariExtensionGenerator = yeoman.generators.Base.extend({
 
     this.prompt(prompts, function (answers) {
       this.Info = answers;
-      console.log(this.Info);
 
       done();
     }.bind(this));
   },
-
+  infoPlist: function () {
+    this.template('Info.plist', this.extensionName + '/Info.plist');
+  },
   app: function () {
-    this.mkdir('app.safariextension');
+    this.mkdir(this.extensionName);
 
     this.copy('_package.json', 'package.json');
     this.copy('_bower.json', 'bower.json');
