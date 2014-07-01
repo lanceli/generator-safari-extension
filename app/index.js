@@ -4,17 +4,18 @@ var path = require('path');
 var yeoman = require('yeoman-generator');
 var yosay = require('yosay');
 var chalk = require('chalk');
+var plist = require('plist');
 
 
 var SafariExtensionGenerator = yeoman.generators.Base.extend({
   init: function () {
     this.pkg = require('../package.json');
 
-      // init extension info
+    // init extension info
     this.Info = {
     };
 
-    this.extensionName = 'app.safariextension';
+    this.extensionDir = 'app.safariextension';
 
     this.on('end', function () {
       if (!this.options['skip-install']) {
@@ -65,14 +66,20 @@ var SafariExtensionGenerator = yeoman.generators.Base.extend({
     this.prompt(prompts, function (answers) {
       this.Info = answers;
 
+      var safari = plist.parse(this.read('/Applications/Safari.app/Contents/version.plist'));
+      this.Info.BuilderVersion = safari.CFBundleVersion;
+
       done();
     }.bind(this));
   },
+  gruntfile: function () {
+    //this.template('Gruntfile.js');
+  },
   infoPlist: function () {
-    this.template('Info.plist', this.extensionName + '/Info.plist');
+    this.template('Info.plist', this.extensionDir + '/Info.plist');
   },
   app: function () {
-    this.mkdir(this.extensionName);
+    this.mkdir(this.extensionDir);
 
     this.copy('_package.json', 'package.json');
     this.copy('_bower.json', 'bower.json');

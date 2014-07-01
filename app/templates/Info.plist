@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Builder Version</key>
-	<string>9537.76.4</string>
+	<string><%= Info.BuilderVersion %></string>
 	<key>CFBundleDisplayName</key>
     <string><%= Info.CFBundleDisplayName %></string>
 	<key>CFBundleIdentifier</key>

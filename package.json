@@ -1,7 +1,7 @@
 {
   "name": "generator-safari-extension",
   "version": "0.0.0",
-  "description": "Yeoman generator",
+  "description": "Safari extension generator",
   "license": "MIT",
   "main": "app/index.js",
   "repository": "lanceli/generator-safari-extension",
@@ -23,8 +23,9 @@
     "yeoman-generator"
   ],
   "dependencies": {
-    "yeoman-generator": "~0.16.0",
     "chalk": "~0.4.0",
+    "plist": "^1.0.1",
+    "yeoman-generator": "~0.16.0",
     "yosay": "^0.1.0"
   },
   "devDependencies": {
