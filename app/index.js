@@ -15,6 +15,8 @@ var SafariExtensionGenerator = yeoman.generators.Base.extend({
     this.Info = {
     };
 
+    // setup the test-framework property, Gruntfile template will need this
+    this.testFramework = this.options['test-framework'] || 'mocha';
     this.coffee = this.options['coffee'];
     this.compass = this.options['compass'];
 
@@ -106,7 +108,7 @@ var SafariExtensionGenerator = yeoman.generators.Base.extend({
   app: function () {
     this.mkdir(this.extensionDir);
 
-    this.copy('_package.json', 'package.json');
+    this.template('_package.json', 'package.json');
     this.copy('_bower.json', 'bower.json');
   },
   infoplist: function () {
