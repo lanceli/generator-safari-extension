@@ -28,7 +28,7 @@ var SafariExtensionGenerator = yeoman.generators.Base.extend({
 
       src = src + ext;
       dest = dest ? dest + ext : src;
-      this.template((this.coffee ? 'coffees/' : 'scripts/') + src, this.extensionDir + '/scripts/' + dest);
+      this.template('scripts/' + src, this.extensionDir + '/scripts/' + dest);
     };
 
     this.on('end', function () {
@@ -110,6 +110,7 @@ var SafariExtensionGenerator = yeoman.generators.Base.extend({
 
     this.template('_package.json', 'package.json');
     this.copy('_bower.json', 'bower.json');
+    this.copy('icon.png', this.extensionDir + '/icon.png');
   },
   infoplist: function () {
     this.template('Info.plist', this.extensionDir + '/Info.plist');
@@ -130,8 +131,10 @@ var SafariExtensionGenerator = yeoman.generators.Base.extend({
   },
   optionspage: function () {
     if (this.Info.optionspage) {
-        this.copy('options.html', this.extensionDir + '/options.html');
-        this.copyjs('options');
+      this.copy('options.html', this.extensionDir + '/options.html');
+      this.copyjs('options');
+      var css = 'styles/main.' + (this.compass ? 's' : '') + 'css';
+      this.copy(css, this.extensionDir + '/' + css);
     }
   },
   projectfiles: function () {

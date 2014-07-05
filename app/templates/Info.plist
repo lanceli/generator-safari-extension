@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+    <key>Author</key>
+    <string><%= Info.Author %></string>
 	<key>Builder Version</key>
 	<string><%= Info.BuilderVersion %></string>
 	<key>CFBundleDisplayName</key>
@@ -24,6 +26,8 @@
 		<key>Scripts</key>
 		<dict/>
 	</dict>
+    <key>Description</key>
+    <string><%= Info.Description %></string>
 	<key>ExtensionInfoDictionaryVersion</key>
 	<string>1.0</string>
 	<key>Permissions</key>
