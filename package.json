@@ -1,10 +1,13 @@
 {
   "name": "generator-safari-extension",
-  "version": "0.0.0",
-  "description": "Safari extension generator",
+  "version": "0.0.1",
+  "description": "Yeoman generator for Safari Extensions",
   "license": "MIT",
   "main": "app/index.js",
-  "repository": "lanceli/generator-safari-extension",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lanceli/generator-safari-extension.git"
+  },
   "author": {
     "name": "Lance Li",
     "email": "",
@@ -20,7 +23,10 @@
     "app"
   ],
   "keywords": [
-    "yeoman-generator"
+    "yeoman-generator",
+    "safari",
+    "extension",
+    "addon"
   ],
   "dependencies": {
     "chalk": "~0.4.0",
