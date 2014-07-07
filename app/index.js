@@ -100,7 +100,6 @@ var SafariExtensionGenerator = yeoman.generators.Base.extend({
       this.Info.BuilderVersion = safari.CFBundleVersion;
       this.Info.globalpage = (answers.features.indexOf('globalpage') != -1);
       this.Info.optionspage = (answers.features.indexOf('optionspage') != -1);
-      console.log(this.Info);
 
       done();
     }.bind(this));
