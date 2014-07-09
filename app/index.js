@@ -103,7 +103,6 @@ var SafariExtensionGenerator = yeoman.generators.Base.extend({
       } else {
           this.Info.BuilderVersion = '9537.77.4';
       }
-      console.log(this.Info);
       this.Info.globalpage = (answers.features.indexOf('globalpage') != -1);
       this.Info.optionspage = (answers.features.indexOf('optionspage') != -1);
 
