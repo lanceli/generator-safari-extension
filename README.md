@@ -47,4 +47,4 @@ Add support for [Compass](http://compass-style.org/).
 
 ## License
 
-MIT
+[MIT](LICENSE)
