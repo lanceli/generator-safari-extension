@@ -113,7 +113,6 @@ var SafariExtensionGenerator = yeoman.generators.Base.extend({
     this.mkdir(this.extensionDir);
 
     this.template('_package.json', 'package.json');
-    this.copy('_bower.json', 'bower.json');
     this.copy('icon.png', this.extensionDir + '/icon.png');
   },
   infoplist: function () {
@@ -129,6 +128,10 @@ var SafariExtensionGenerator = yeoman.generators.Base.extend({
   },
   git: function () {
     this.template('gitignore', '.gitignore');
+  },
+  bower: function () {
+    this.copy('_bower.json', 'bower.json');
+    this.copy('bowerrc', '.bowerrc');
   },
   globalpage: function () {
     if (this.Info.globalpage) {
