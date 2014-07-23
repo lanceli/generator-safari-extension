@@ -19,6 +19,7 @@
   "smarttabs": true,
   "white": true,
   "globals" : {
-      "safari": true
+      "safari": true,
+      "localStorage": true
   }
 }
