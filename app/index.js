@@ -127,6 +127,9 @@ var SafariExtensionGenerator = yeoman.generators.Base.extend({
   gruntfile: function () {
     this.template('Gruntfile.js');
   },
+  git: function () {
+    this.template('gitignore', '.gitignore');
+  },
   globalpage: function () {
     if (this.Info.globalpage) {
       this.copy('global.html', this.extensionDir + '/global.html');
