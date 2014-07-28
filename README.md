@@ -1,4 +1,4 @@
-# Safari Extension generator [![Build Status](https://secure.travis-ci.org/lanceli/generator-safari-extension.png?branch=master)](https://travis-ci.org/lanceli/generator-safari-extension)
+# Safari Extension generator [![Build Status](http://img.shields.io/travis/lanceli/generator-safari-extension.svg?style=flat)](https://travis-ci.org/lanceli/generator-safari-extension) [![download](http://img.shields.io/npm/dm/generator-safari-extension.svg?style=flat)](https://www.npmjs.org/package/generator-safari-extension)
 
 > [Yeoman](http://yeoman.io) generator for Safari Extensions inspired by [Chrome Extension generator](https://github.com/yeoman/generator-chrome-extension)
 
