@@ -48,7 +48,7 @@ var SafariExtensionGenerator = yeoman.generators.Base.extend({
       {
         name: 'CFBundleDisplayName',
         message: 'The extension display name?',
-        default: 'demo'
+        default : this.appname ? this.appname : 'demo'
       },
       {
         name: 'Author',
