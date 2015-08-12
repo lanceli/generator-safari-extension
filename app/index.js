@@ -1,6 +1,6 @@
 'use strict';
 var util = require('util');
-var path = require('path');
+var fs = require('fs');
 var yeoman = require('yeoman-generator');
 var yosay = require('yosay');
 var chalk = require('chalk');
@@ -97,7 +97,7 @@ var SafariExtensionGenerator = yeoman.generators.Base.extend({
       this.Info = answers;
 
       var safariVersionPlist = '/Applications/Safari.app/Contents/version.plist';
-      if (path.existsSync(safariVersionPlist)) {
+      if (fs.existsSync(safariVersionPlist)) {
           var safari = plist.parse(this.read(safariVersionPlist));
           this.Info.BuilderVersion = safari.CFBundleVersion;
       } else {
