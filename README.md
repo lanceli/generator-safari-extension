@@ -5,7 +5,7 @@
 
 ## Getting Started
 
-- First make a new directory, and `cd` into it: mkdir my-new-safari-extension && cd $_
+- First make a new directory, and `cd` into it: `mkdir my-new-safari-extension && cd $_`
 - Install the generator: `npm install -g generator-safari-extension`
 - Run: `yo safari-extension`
 
